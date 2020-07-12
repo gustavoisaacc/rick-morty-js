@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/estilos.css">
     <title>Document</title>
 </head>
 <body>
-    <script src="static/js/app.js"></script>
+    <img class="logo" src="./static/images/logo@2x.png" alt="">
+    <div id="caracter-container"></div>
+    <aside class="navegation">
+      <span>About</span>
+      <span>Name</span>
+      <span class="asset">
+        <span class="linea"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </span>
+    </aside>
+    <article class="caracter container">
+        <div class="caracter-grid">
+            <img class="caracter-img" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg   " alt="">
+            <h2 class="caracter-name">Rick Sanchez</h2>
+
+          <div class="caracter-labels">
+            <h3 class="caracter-label">Gènero: trnas</h3>
+            <h3 class="caracter-label">Especie: mxl</h3>
+            <h3 class="caracter-label">Status: mayor</h3>
+          </div>
+        </div>
+    </article>
+
+    <script type="module" src="static/js/app.js"></script>
 </body>
 </html>

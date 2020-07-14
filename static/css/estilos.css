@@ -1,0 +1,195 @@
+:root{
+    --color-primay: #00a5be;
+    --color-secondary: #685128; 
+    --color-light: #fff;
+    --color-dark: #000;
+}
+
+/* globales */
+body{
+    margin: 0;
+    background-color: var(--color-primay);
+    font-family: system-ui;
+}
+
+.container{
+    max-width: 1000px;
+    width: 95%;
+    margin: 0 auto;
+}
+@media (min-width: 768px){
+    .container{
+        width: 90%;
+    }
+}
+
+
+.logo{
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    grid-area: logo;
+}
+
+@media (min-width: 768px){
+    .logo{
+        width: 50%;
+    }
+}
+.caracter{
+    text-align: center;
+}
+.caracter-img{
+    width: 100%;
+    border-radius: 70%;
+}
+@media (min-width: 900px){
+    .caracter-img{
+        width: 300px;
+    }
+}
+
+.caracter-name{
+    font-size: 30px;
+}
+.caracter-label{
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 25px;
+    text-align: left;
+}
+@media (min-width: 480px){
+    .caracter-labels{
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 900px){
+    .caracter-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'name image' 'labels image';
+    }
+    .caracter-name{
+        grid-area: name;
+        text-align: left;
+        font-size: 40px;
+        position: relative;
+    }
+    .caracter-name::after{
+        content: '';
+        width: 87px;
+        height: 6px;
+        background-color: #f7391c;
+        display: inline-flex;
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+    }
+
+    .caracter-labels{
+        grid-area: labels;
+    }
+    .caracter-img{
+        grid-area: image;
+        width: 70%;
+        
+    }
+
+}
+.grid{
+    height: 100vh;
+    padding: 4em;
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 200px;
+    grid-template-rows: 312px 100px 1fr 1fr;
+    grid-column-gap: 8em;
+    grid-template-areas: "asset-top logo logo sociales"
+    "name caracter-name avatar avatar"
+    "about description avatar avatar"
+    "asset-botton asset arrow othr-line";
+}
+.caracter-image-container{
+    grid-area: avatar;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.asset.top{
+    grid-row: asset-top;
+    display: flex;
+    align-items: center;
+    writing-mode: vertical-lr;
+    border: 1px solid red;
+}
+
+.sociales{
+    grid-area: sociales;
+    border: 1px solid red;
+
+}
+.name{
+    grid-area: name;
+}
+.about{
+    grid-area: about;
+}
+
+.navegacion{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navegacion a{
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: black;           
+}
+
+.caracter-name-container{
+    border: 1px solid blue;
+    padding-left: 5px;
+}
+.caracter-description-container{
+    grid-area: description;
+}
+.navegation{
+    /* transform-origin: left bottom; */
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    height: 100vh;
+    border: 1px solid #000;
+    position: absolute;
+    left: 1em;
+    bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    display: none;
+}
+.navegation .text{
+    display: inline-block;
+    padding: 35px 0;
+}
+.linea{
+    width: 2px;
+    height: 100px;
+    background-color: #000;
+    display: inline-flex;
+    position: relative;
+    bottom: 4px;
+    margin: 10px 0;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-flex;
+    margin: 5px 0;
+}

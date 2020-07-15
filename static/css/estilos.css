@@ -94,7 +94,7 @@ body{
     }
     .caracter-img{
         grid-area: image;
-        width: 70%;
+        width: 50%;
         
     }
 
@@ -104,12 +104,28 @@ body{
     padding: 4em;
     display: grid;
     grid-template-columns: 50px 1fr 1fr 200px;
-    grid-template-rows: 312px 100px 1fr 1fr;
+    grid-template-rows: 230px 100px 1fr 1fr 1fr;
     grid-column-gap: 8em;
-    grid-template-areas: "asset-top logo logo sociales"
-    "name caracter-name avatar avatar"
-    "about description avatar avatar"
-    "asset-botton asset arrow othr-line";
+    grid-template-areas: "asset-top logo logo sociales" "name caracter-name avatar avatar" "about description avatar avatar" "asset-bottom chars avatar avatar" "asset-bottom asset arrow othr-line";
+}
+.learn-more{
+    grid-area: asset;
+    border: 1px solid brown;
+    margin-right: 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-end;
+    background-image: url('../images/learn-more.svg');
+    background-repeat: no-repeat;
+    background-position: left 170px bottom 5px;
+}
+.arrow{
+    grid-area: arrow;
+    background-image: url('../images/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom ;
+    border: 1px solid lightseagreen;
 }
 .caracter-image-container{
     grid-area: avatar;
@@ -118,12 +134,20 @@ body{
     justify-content: center;
     align-items: center;
 }
-.asset.top{
-    grid-row: asset-top;
+.asset{
     display: flex;
     align-items: center;
     writing-mode: vertical-lr;
+}
+.asset.top{
+    grid-area: asset-top;
     border: 1px solid red;
+}
+.asset.bottom{
+    grid-area: asset-bottom;
+    border:1px solid  blue;
+    justify-content: flex-end;
+
 }
 
 .sociales{
@@ -159,8 +183,8 @@ body{
 .caracter-description-container{
     grid-area: description;
 }
-.navegation{
-    /* transform-origin: left bottom; */
+/* .navegation{
+    /* transform-origin: left bottom;
     transform: rotate(180deg);
     writing-mode: vertical-rl;
     height: 100vh;
@@ -170,8 +194,8 @@ body{
     bottom: 0;
     text-align: center;
     text-transform: uppercase;
-    display: none;
-}
+    display: none; 
+} */
 .navegation .text{
     display: inline-block;
     padding: 35px 0;

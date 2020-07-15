@@ -1,35 +1,19 @@
 import API from './api.js'
+import Caracter from './caracter.js'
 const api = new API()
+let cont = 1
+const next = document.querySelector('#next')
 
-const caracterContainer = document.querySelector('#caracter-container')
-
-class Caracter {
-    constructor({name, image}){
-        this.name = name
-        this.image = image
-        this.render()
-    }
-
-    build () {
-        return `
-        <article class="caracter">
-            <div class="caracter-grid">
-                <h2 class="caracter-name">${this.name}</h2>
-                <img src="${this.image}" alt="">
-            </div>
-        </article>
-        `
-    }
-
-    render(){
-        caracterContainer.innerHTML = this.build()
-    }
-}
+next.addEventListener('click', async (e)=> {
+    const caracterData = await api.getCaracter(++cont)
+    const rick = new Caracter(caracterData)
+})
 
 async function initApp(initCaracterId){
     const caracterData = await api.getCaracter(initCaracterId)
-    // const rick = new Caracter(caracterData)
+    console.log(caracterData)
+    const rick = new Caracter(caracterData)
 
 }
 
-initApp(1)
+initApp(cont)

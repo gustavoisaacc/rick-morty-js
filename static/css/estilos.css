@@ -40,17 +40,12 @@ body{
     text-align: center;
 }
 .caracter-img{
-    width: 100%;
-    border-radius: 70%;
-}
-@media (min-width: 900px){
-    .caracter-img{
-        width: 300px;
-    }
+    width: 80%;
+    border-radius: 100%;
 }
 
 .caracter-name{
-    font-size: 30px;
+    font-size: 50px;
 }
 .caracter-label{
     background-color: var(--color-secondary);
@@ -62,18 +57,19 @@ body{
 }
 @media (min-width: 480px){
     .caracter-labels{
-        max-width: 300px;
+        width: 100%;
+        display: block;
     }
 }
 
-@media (min-width: 900px){
+ @media (min-width: 900px){
     .caracter-grid{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 'name image' 'labels image';
+        grid-template-areas: 'name image' 'labels labels';
     }
     .caracter-name{
-        grid-area: name;
+        
         text-align: left;
         font-size: 40px;
         position: relative;
@@ -91,6 +87,7 @@ body{
 
     .caracter-labels{
         grid-area: labels;
+       
     }
     .caracter-img{
         grid-area: image;
@@ -98,19 +95,19 @@ body{
         
     }
 
-}
+} 
 .grid{
-    height: 100vh;
+    height: 90vh;
     padding: 4em;
     display: grid;
     grid-template-columns: 50px 1fr 1fr 200px;
     grid-template-rows: 230px 100px 1fr 1fr 1fr;
-    grid-column-gap: 8em;
+    grid-column-gap: 2em;
     grid-template-areas: "asset-top logo logo sociales" "name caracter-name avatar avatar" "about description avatar avatar" "asset-bottom chars avatar avatar" "asset-bottom asset arrow othr-line";
+    
 }
 .learn-more{
     grid-area: asset;
-    border: 1px solid brown;
     margin-right: 20px;
     font-size: 25px;
     text-transform: uppercase;
@@ -125,15 +122,21 @@ body{
     background-image: url('../images/arrow.svg');
     background-repeat: no-repeat;
     background-position: center bottom ;
-    border: 1px solid lightseagreen;
 }
 .caracter-image-container{
     grid-area: avatar;
-    border: 1px solid green;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.caracter-name-container{
+    grid-area: caracter-name;
+    padding-left: 5px;
+}
+.caracter-description-container{
+    grid-area: description;
+}
+
 .asset{
     display: flex;
     align-items: center;
@@ -141,19 +144,15 @@ body{
 }
 .asset.top{
     grid-area: asset-top;
-    border: 1px solid red;
 }
 .asset.bottom{
     grid-area: asset-bottom;
-    border:1px solid  blue;
     justify-content: flex-end;
 
 }
 
 .sociales{
     grid-area: sociales;
-    border: 1px solid red;
-
 }
 .name{
     grid-area: name;
@@ -176,26 +175,7 @@ body{
     color: black;           
 }
 
-.caracter-name-container{
-    border: 1px solid blue;
-    padding-left: 5px;
-}
-.caracter-description-container{
-    grid-area: description;
-}
-/* .navegation{
-    /* transform-origin: left bottom;
-    transform: rotate(180deg);
-    writing-mode: vertical-rl;
-    height: 100vh;
-    border: 1px solid #000;
-    position: absolute;
-    left: 1em;
-    bottom: 0;
-    text-align: center;
-    text-transform: uppercase;
-    display: none; 
-} */
+
 .navegation .text{
     display: inline-block;
     padding: 35px 0;
@@ -216,4 +196,34 @@ body{
     border-radius: 50%;
     display: inline-flex;
     margin: 5px 0;
+}
+/* .navegation{
+    /* transform-origin: left bottom;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    height: 100vh;
+    border: 1px solid #000;
+    position: absolute;
+    left: 1em;
+    bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    display: none; 
+} */
+
+@media (max-width: 1424px){
+    .grid{
+        display: grid;
+        grid-template-columns: 50px 1fr 200px;
+        grid-template-rows: 230px 500px 100px 1fr 1fr;
+        grid-column-gap: 2em;
+        grid-template-areas: "asset-top logo sociales" "name  avatar avatar" "name caracter-name caracter-name" "about description description"  "asset-bottom asset arrow";
+        margin-bottom: 20px;
+    }
+    .caracter-name-container h2{
+        text-align: center;
+    }
+    .arrow{
+        background-position: center;
+    }
 }

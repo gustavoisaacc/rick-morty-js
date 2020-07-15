@@ -13,8 +13,8 @@ body{
 }
 
 .container{
-    max-width: 1000px;
-    width: 95%;
+    max-width: 1900px;
+    width: 100%;
     margin: 0 auto;
 }
 @media (min-width: 768px){
@@ -22,7 +22,6 @@ body{
         width: 90%;
     }
 }
-
 
 .logo{
     display: block;
@@ -55,7 +54,7 @@ body{
     font-size: 25px;
     text-align: left;
 }
-@media (min-width: 480px){
+@media (max-width: 480px){
     .caracter-labels{
         width: 100%;
         display: block;
@@ -91,11 +90,23 @@ body{
     }
     .caracter-img{
         grid-area: image;
-        width: 50%;
+        width: 80%;
         
     }
 
 } 
+@media (min-width: 1100px){
+    .caracter-img{
+        width: 50%;
+        
+    }
+}
+@media (min-width: 1500px){
+    .caracter-img{
+        width: 70%;
+        
+    }
+}
 .grid{
     height: 90vh;
     padding: 4em;
@@ -122,6 +133,7 @@ body{
     background-image: url('../images/arrow.svg');
     background-repeat: no-repeat;
     background-position: center bottom ;
+    cursor: pointer;
 }
 .caracter-image-container{
     grid-area: avatar;
@@ -135,6 +147,9 @@ body{
 }
 .caracter-description-container{
     grid-area: description;
+}
+.caracter-description-container img{
+    width: 100%;
 }
 
 .asset{
@@ -211,6 +226,7 @@ body{
     display: none; 
 } */
 
+
 @media (max-width: 1424px){
     .grid{
         display: grid;
@@ -223,7 +239,20 @@ body{
     .caracter-name-container h2{
         text-align: center;
     }
-    .arrow{
-        background-position: center;
+  
+}
+@media (max-width: 1024px){
+    .grid{
+        display: grid;
+        grid-template-columns: 50px 1fr 200px;
+        grid-template-rows: 230px 500px 100px 1fr 1fr 1fr;
+        grid-template-areas: "asset-top logo logo" "name  avatar avatar" "name caracter-name caracter-name" "about description description"  "asset-bottom asset arrow"  "sociales sociales sociales";
+        padding: 2em;
+    }
+    .sociales{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 80px;
     }
 }

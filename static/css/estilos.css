@@ -261,10 +261,13 @@ body{
     .grid{
         display: grid;
         grid-template-columns: 50px 1fr 200px;
-        grid-template-rows: 230px 500px 100px 1fr 1fr 1fr;
+        grid-template-rows: 230px 300px 200px 1fr 1fr 1fr;
         grid-template-areas: "logo logo logo" "avatar  avatar avatar" "caracter-name caracter-name caracter-name" "description description description"  "arrow arrow arrow"  "sociales sociales sociales";
         padding: 2em;
         grid-gap:0;
+    }
+    .arrow{
+        background-position: center;
     }
     .learn-more,.navegacion, .asset{
         display: none;

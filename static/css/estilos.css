@@ -11,7 +11,11 @@ body{
     background-color: var(--color-primay);
     font-family: system-ui;
 }
-
+.btn{
+    background-color: red;
+    padding: 10px 20px;
+    display: none;
+}
 .container{
     max-width: 1900px;
     width: 100%;
@@ -134,6 +138,7 @@ body{
     background-repeat: no-repeat;
     background-position: center bottom ;
     cursor: pointer;
+    display: block;
 }
 .caracter-image-container{
     grid-area: avatar;
@@ -268,6 +273,8 @@ body{
     }
     .arrow{
         background-position: center;
+        display: none;
+      
     }
     .learn-more,.navegacion, .asset{
         display: none;
@@ -279,5 +286,9 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .btn{
+        display: block;
+        grid-area: arrow;
     }
 }

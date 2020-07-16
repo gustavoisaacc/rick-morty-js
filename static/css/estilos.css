@@ -256,3 +256,17 @@ body{
         margin-top: 80px;
     }
 }
+
+@media (max-width: 480px){
+    .grid{
+        display: grid;
+        grid-template-columns: 50px 1fr 200px;
+        grid-template-rows: 230px 500px 100px 1fr 1fr 1fr;
+        grid-template-areas: "logo logo logo" "avatar  avatar avatar" "caracter-name caracter-name caracter-name" "description description description"  "arrow arrow arrow"  "sociales sociales sociales";
+        padding: 2em;
+        grid-gap:0;
+    }
+    .learn-more,.navegacion, .asset{
+        display: none;
+    }
+}

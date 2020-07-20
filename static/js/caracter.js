@@ -8,6 +8,7 @@ export default class Caracter {
         this.caracterNameContauiner = document.querySelector('#caracter-name-container')
         this.caracterDescriptionContauiner = document.querySelector('#caracter-description-container')
         this.caracterImageContainer = document.querySelector('#caracter-image-container')
+        this.caracterNamePlaceholder = document.querySelector('#caracter-name-placeholder')
         this.render()
     }
 
@@ -35,5 +36,7 @@ export default class Caracter {
         this.caracterImageContainer.innerHTML = this.buildImage()
         this.caracterNameContauiner.innerHTML = this.buildName()
         this.caracterDescriptionContauiner.innerHTML = this.buildDescription()
+        this.caracterNamePlaceholder.innerHTML = this.buildName()
+
     }
 }

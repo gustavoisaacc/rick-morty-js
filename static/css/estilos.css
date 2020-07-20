@@ -10,6 +10,7 @@ body{
     margin: 0;
     background-color: var(--color-primay);
     font-family: system-ui;
+    overflow: hidden;
 }
 .btn{
     display: none;
@@ -111,6 +112,8 @@ body{
     }
 }
 .grid{
+    position: relative;
+    z-index: 10;
     height: 95vh;
     padding: 4em;
     display: grid;
@@ -306,4 +309,23 @@ body{
         align-items: center;
         margin-left: 100px;
     }
+}
+.caracter-name-placeholder{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    z-index: 1;
+    
+}
+.caracter-name-placeholder h2{
+    font-size: 500px !important;
+    font-weight: bold;
 }
